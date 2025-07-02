@@ -1,50 +1,102 @@
-import React from 'react'
+import { GithubIcon, LinkedinIcon, Mail, MapPin, Phone } from "lucide-react";
 
-const Contact = () => {
-  return (
-    <section id="contact" className="container mx-auto px-4 pt-10 mt-16">
-      <h1 className="text-center text-4xl">Contact</h1>
-      <div className="grid gap-8 mt-8"></div>
-      <div>
-        <div className="w-full h-auto text-center text-xl px-10 py-10">
-          <h1></h1>
-          <p>
+interface ContactProps {
+  title?: string;
+  description?: string;
+  emailLabel?: string;
+  emailDescription?: string;
+  email?: string;
+  officeLabel?: string;
+  officeDescription?: string;
+  officeAddress?: string;
+  phoneLabel?: string;
+  phoneDescription?: string;
+  phone?: string;
+  xLabel: string;
+  linkeninLabel: string;
+  linkenin: string;
+  githubLabel: string;
+  github: string;
+}
+
+const Contact = ({
+  title = "Contact",
+  description = "Social Media and Email",
+  emailLabel = "Email",
+  emailDescription = "We respond to all emails within 24 hours.",
+  email = "pramadito@gmail.com",
+  officeLabel = "Office",
+  officeDescription = "Drop by our office for a chat.",
+  officeAddress = "1 Eagle St, Brisbane, QLD, 4000",
+  phoneLabel = "Phone",
+  phoneDescription = "We're available Mon-Fri, 9am-5pm.",
+  phone = "+123 456 7890",
+  xLabel = "",
+  linkeninLabel = "Linken In",
+  linkenin = "https://linkedin.com/in/pramadito",
+  githubLabel = "Github",
+  github = "https://github.com/pramadito"
+}: ContactProps) => {
+   return (
+    <div id="contact" className="container mx-auto lg:px-12 px-3">
+    <section className="bg-background py-32">
+      <div className="container">
+        <div className="mb-14">
+          <h1 className="mt-2 mb-3 text-3xl font-semibold text-balance lg:text-4xl">
+            {title}
+          </h1>
+          <p className="max-w-xl text-lg text-muted-foreground">
+            {description}
+          </p>
+        </div>
+        <div className="grid gap-10 lg:grid-cols-3">
+          <div>
+            <span className="mb-3 flex size-12 flex-col items-center justify-center rounded-full bg-accent">
+              <Mail className="h-6 w-auto" />
+            </span>
+            <p className="mb-2 text-lg font-semibold">{emailLabel}</p>
             
-Backend: Python (FastAPI), C#, .NET, Java, SQL, Docker
-
-Frontend: JavaScript, TypeScript, HTML/CSS, Bootstrap
-
-Cloud/DevOps: AWS (EC2, Lightsail), Heroku, Cloud Database Management
-
-API Development: OpenAPI, JSON Schema
-
-Business Skills
-Financial Analysis (Banking internship)
-
-Market Research
-
-International Trade (Sekolah Ekspor)
-
-Entrepreneurship
-
-Languages
-English (Professional)
-
-Bahasa Indonesia (Native)
-          </p>
+            <a
+              href={`mailto:${email}`}
+              className="font-semibold hover:underline"
+            >
+              {email}
+            </a>
+          </div>
+          
+          <div>
+            <span className="mb-3 flex size-12 flex-col items-center justify-center rounded-full bg-accent">
+              <LinkedinIcon className="h-6 w-auto" />
+            </span>
+            <p className="mb-2 text-lg font-semibold">{linkeninLabel}</p>
+           
+             <a
+              href={`${linkenin}`}
+              className="font-semibold hover:underline"
+            >
+              {linkenin}
+            </a>
+          </div>
+          
+          <div>
+            <span className="mb-3 flex size-12 flex-col items-center justify-center rounded-full bg-accent">
+              <GithubIcon className="h-6 w-auto" />
+            </span>
+            <p className="mb-2 text-lg font-semibold">{githubLabel}</p>
+           
+             <a
+              href={`${github}`}
+              className="font-semibold hover:underline"
+            >
+              {github}
+            </a>
+          </div>
+          
         </div>
-
-        <div className="w-full h-auto text-center text-xl px-10 py-10">
-          <p>
-            Core Values: Adaptive leadership in tech teams Cross-functional
-        business-technology integration Commitment to continuous learning
-        Community-focused development
-          </p>
-        </div>
-        
       </div>
     </section>
-  )
+    </div>
+  );
 }
 
 export default Contact

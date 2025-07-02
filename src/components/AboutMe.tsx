@@ -10,7 +10,10 @@ import { ArrowUp } from "lucide-react";
 
 function AboutMe() {
   return (
-    <section id="about-me" className="container mx-auto px-4 pt-10 mt-16">
+    <section
+      id="about-me"
+      className="container mx-auto px-4 pt-10 mt-16 bg-purple-950/20 "
+    >
       <h1 className="text-center text-4xl">About Me</h1>
       <div className="grid gap-8 mt-8"></div>
       <div>
@@ -24,14 +27,16 @@ function AboutMe() {
         </div>
 
         <div className="w-full h-auto text-center text-xl px-10 py-10">
-          <p>
-            Core Values: Adaptive leadership in tech teams Cross-functional
-        business-technology integration Commitment to continuous learning
-        Community-focused development
-          </p>
+          <h1 className="text-center text-2xl">Core Skills</h1>
+          <p>Backend:</p>
+          <p>Python, C#, Java, Docker, FastAPI</p>
+          <p>Frontend: </p>
+          <p>JavaScript, HTML/CSS, Bootstrap, TypeScript</p>
+          <p>Cloud:</p>
+          <p> AWS EC2, Lightsail, Heroku, Vercel</p>
         </div>
-        
       </div>
+      
     </section>
   );
 }
