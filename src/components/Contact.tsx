@@ -6,32 +6,17 @@ interface ContactProps {
   emailLabel?: string;
   emailDescription?: string;
   email?: string;
-  officeLabel?: string;
-  officeDescription?: string;
-  officeAddress?: string;
-  phoneLabel?: string;
-  phoneDescription?: string;
-  phone?: string;
-  xLabel: string;
-  linkeninLabel: string;
-  linkenin: string;
-  githubLabel: string;
-  github: string;
+  linkeninLabel?: string;
+  linkenin?: string;
+  githubLabel?: string;
+  github?: string;
 }
 
 const Contact = ({
   title = "Contact",
   description = "Social Media and Email",
   emailLabel = "Email",
-  emailDescription = "We respond to all emails within 24 hours.",
   email = "pramadito@gmail.com",
-  officeLabel = "Office",
-  officeDescription = "Drop by our office for a chat.",
-  officeAddress = "1 Eagle St, Brisbane, QLD, 4000",
-  phoneLabel = "Phone",
-  phoneDescription = "We're available Mon-Fri, 9am-5pm.",
-  phone = "+123 456 7890",
-  xLabel = "",
   linkeninLabel = "Linken In",
   linkenin = "https://linkedin.com/in/pramadito",
   githubLabel = "Github",
