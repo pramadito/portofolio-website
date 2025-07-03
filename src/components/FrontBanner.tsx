@@ -1,6 +1,7 @@
 import { Search } from "lucide-react";
 import { Button } from "./ui/button";
 import { Fade , Slide } from "react-awesome-reveal";
+import Link from "next/link";
 
 const FrontBanner = () => {
   return (
@@ -27,7 +28,19 @@ const FrontBanner = () => {
         
         <div className="flex flex-wrap items-center gap-2 md:flex-row">
           <Fade delay={500} triggerOnce>
-          <Button>Contact Me</Button>
+        <Button 
+          asChild
+          variant="default" // or "outline", "ghost", etc. based on your design
+          className="transition-all hover:scale-105" // optional hover effect
+        >
+          <a 
+            href="https://docs.google.com/document/d/10HJWe4OYFg3tP5ID1JY1DZmh3emg-pWI/edit?rtpof=true&tab=t.0" 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contact Me
+          </a>
+        </Button>
           </Fade>
         </div>
       </div>
