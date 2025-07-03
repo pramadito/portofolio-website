@@ -91,7 +91,7 @@ const Portofolio = () => (
                 </Link>
               </Button>
             </div>
-            <p className="mt-5 text-[17px]">{portofolio.testimonial}</p>
+            <p className="mt-5 text-[17px] line-clamp-3">{portofolio.testimonial}</p>
           </div>
         ))}
       </div>

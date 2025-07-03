@@ -5,7 +5,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 const Testimonial = () => {
   return (
-    <section id="testimonial" className="py-32 px-4 md:px-16">
+    <section id="testimonial" className="container mx-auto py-32 px-4 md:px-16">
       <div className="container">
         <div className="flex flex-col gap-6">
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-center">

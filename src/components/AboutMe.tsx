@@ -12,7 +12,7 @@ function AboutMe() {
   return (
     <section
       id="about-me"
-      className="container mx-auto px-4 pt-10 mt-16 bg-purple-950/20 "
+      className="container mx-auto px-4 py-16  mt-16 bg-purple-950/20 "
     >
       <h1 className="text-center text-4xl">About Me</h1>
       <div className="grid gap-8 mt-8"></div>
