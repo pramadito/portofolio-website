@@ -35,81 +35,81 @@ const portofolios = [
     id: 4,
     name: "Emily Davis",
     designation: "Marketing Specialist",
-    company: "BrandBoost",
-    testimonial:
-      "I've seen a significant improvement in our team's productivity since we started using this service.",
-    avatar: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    id: 5,
-    name: "Daniel Martinez",
-    designation: "Full-Stack Developer",
-    company: "CodeCrafters",
-    testimonial:
-      "The best investment we've made! The support team is also super responsive and helpful.",
-    avatar: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    id: 6,
-    name: "Jane Smith",
-    designation: "Product Manager",
-    company: "InnovateX",
-    testimonial:
-      "The user experience is top-notch! The interface is clean, intuitive, and easy to navigate.",
-    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
-  },
-];
-const Portofolio = () => (
-  <div id="portofolio" className="min-h-screen flex justify-center items-center py-12 px-6">
-    <div>
-      <h2 className="mb-14 text-5xl md:text-6xl font-bold text-center tracking-tight">
-        Portofolio
-      </h2>
-      <div className="max-w-screen-xl mx-auto columns-1 md:columns-2 lg:columns-3 gap-8">
-        {portofolios.map((portofolio) => (
-          <div
-            key={portofolio.id}
-            className="mb-8 rounded-xl p-6 break-inside-avoid shadow-[0px_0px_16px_0px_rgba(0,_0,_0,_0.1)]"
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <Avatar>
-                  <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
-                    {portofolio.name.charAt(0)}
-                  </AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="text-lg font-semibold">{portofolio.name}</p>
-                  <p className="text-sm text-gray-500">
-                    {portofolio.designation}
-                  </p>
+      company: "BrandBoost",
+      testimonial:
+        "I've seen a significant improvement in our team's productivity since we started using this service.",
+      avatar: "https://randomuser.me/api/portraits/women/4.jpg",
+    },
+    {
+      id: 5,
+      name: "Daniel Martinez",
+      designation: "Full-Stack Developer",
+      company: "CodeCrafters",
+      testimonial:
+        "The best investment we've made! The support team is also super responsive and helpful.",
+      avatar: "https://randomuser.me/api/portraits/men/5.jpg",
+    },
+    {
+      id: 6,
+      name: "Jane Smith",
+      designation: "Product Manager",
+      company: "InnovateX",
+      testimonial:
+        "The user experience is top-notch! The interface is clean, intuitive, and easy to navigate.",
+      avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+    },
+  ];
+  const Portofolio = () => (
+    <div id="portofolio" className="min-h-screen flex justify-center items-center py-12 px-6">
+      <div>
+        <h2 className="mb-14 text-5xl md:text-6xl font-bold text-center tracking-tight">
+          Portofolio
+        </h2>
+        <div className="max-w-screen-xl mx-auto columns-1 md:columns-2 lg:columns-3 gap-8">
+          {portofolios.map((portofolio) => (
+            <div
+              key={portofolio.id}
+              className="mb-8 rounded-xl p-6 break-inside-avoid shadow-[0px_0px_16px_0px_rgba(0,_0,_0,_0.1)]"
+            >
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <Avatar>
+                    <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
+                      {portofolio.name.charAt(0)}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <p className="text-lg font-semibold">{portofolio.name}</p>
+                    <p className="text-sm text-gray-500">
+                      {portofolio.designation}
+                    </p>
+                  </div>
                 </div>
+                <Button variant="ghost" size="icon" asChild>
+                  <Link href="#" target="_blank">
+                    <TwitterLogo className="w-4 h-4" />
+                  </Link>
+                </Button>
               </div>
-              <Button variant="ghost" size="icon" asChild>
-                <Link href="#" target="_blank">
-                  <TwitterLogo className="w-4 h-4" />
-                </Link>
-              </Button>
+              <p className="mt-5 text-[17px] line-clamp-3">{portofolio.testimonial}</p>
             </div>
-            <p className="mt-5 text-[17px] line-clamp-3">{portofolio.testimonial}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
-  </div>
-);
-const TwitterLogo = (props: ComponentProps<"svg">) => (
-  <svg
-    role="img"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <title>X</title>
-    <path
-      fill="currentColor"
-      d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
-    />
-  </svg>
-);
-export default Portofolio;
+  );
+  const TwitterLogo = (props: ComponentProps<"svg">) => (
+    <svg
+      role="img"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <title>X</title>
+      <path
+        fill="currentColor"
+        d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+      />
+    </svg>
+  );
+  export default Portofolio;

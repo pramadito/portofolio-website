@@ -15,7 +15,7 @@ export const NavigationSheet = () => {
       <SheetTitle className="hidden"/>
       <SheetContent className="p-5">
         <Logo />
-        <NavMenu orientation="vertical" className="mt-12" />
+        <NavMenu orientation="vertical" className="-mt-20" />
       </SheetContent>
     </Sheet>
   );

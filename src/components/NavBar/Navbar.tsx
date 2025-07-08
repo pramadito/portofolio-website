@@ -16,7 +16,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className="lg:hidden text-white">
+      <div className="lg:hidden text-white ">
         <NavigationSheet/>
         {/* https://ui.shadcn.com/docs/components/sidebar */}
       </div>
