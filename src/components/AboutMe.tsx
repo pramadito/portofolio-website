@@ -30,9 +30,7 @@ function AboutMe() {
             <p className="text-gray-300">
               Python (FastAPI), C# (.NET), Java, SQL, Docker, OpenAPI/JSON Schema
             </p>
-            <p className="mt-2 text-sm">
-              Built full-stack API systems including thesis project with FastAPI and Docker
-            </p>
+            
           </div>
 
           <div className="mb-6">
@@ -40,9 +38,7 @@ function AboutMe() {
             <p className="text-gray-300">
               JavaScript, TypeScript, HTML/CSS, Bootstrap, WordPress
             </p>
-            <p className="mt-2 text-sm">
-              Developed user interfaces for PPI UK website and railway diagnostic tools
-            </p>
+  
           </div>
 
           <div className="mb-6">

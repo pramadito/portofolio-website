@@ -1,50 +1,73 @@
 import {
-  Blocks,
-  Bot,
-  ChartPie,
-  Film,
-  MessageCircle,
+  Code,
+  Database,
+  Server,
+  Cloud,
+  Cpu,
+  FileText,
+  Globe,
+  Languages,
   Settings2,
 } from "lucide-react";
 import React from "react";
+
 const skills = [
   {
-    icon: Settings2,
+    icon: Code,
     title: "Frontend Development",
     description:
-      "Design your space with drag-and-drop simplicity—create grids, lists, or galleries in seconds.",
+      "Proficient in JavaScript, TypeScript, HTML, CSS, and Bootstrap for creating responsive and user-friendly interfaces.",
   },
   {
-    icon: Blocks,
+    icon: Server,
     title: "Backend Development",
     description:
-      "Embed polls, quizzes, or forms to keep your audience engaged.",
+      "Experienced in Python, C++, C#, Java, and FastAPI for building robust server-side applications and APIs.",
   },
   {
-    icon: Bot,
-    title: "AI-Powered Tools",
+    icon: Database,
+    title: "Database & Cloud",
     description:
-      "Generate summaries, auto-format content, or translate into multiple languages seamlessly.",
+      "Skilled in SQL, Docker, AWS EC2, AWS Lightsail, and Heroku for database management and cloud computing solutions.",
   },
   {
-    icon: Film,
-    title: "Media Integrations",
+    icon: Cpu,
+    title: "Full Stack Development",
     description:
-      "Connect with Spotify, Instagram, or your own media library for dynamic visuals and sound.",
+      "Created standards-based full stack software with API using OpenAPI and JSON Schema.",
   },
   {
-    icon: ChartPie,
-    title: "Advanced Analytics",
+    icon: Settings2,
+    title: "Desktop Applications",
     description:
-      "Track engagement, clicks, and user activity with intuitive charts and reports.",
+      "Developed desktop applications using .NET framework and Python for various business needs.",
   },
   {
-    icon: MessageCircle,
-    title: "Seamless Collaboration",
+    icon: Cloud,
+    title: "Cloud Server Management",
     description:
-      "Comment, tag, and assign tasks directly within your documents.",
+      "Managed cloud server databases and deployed applications on various cloud platforms.",
+  },
+  {
+    icon: FileText,
+    title: "Legacy Code Maintenance",
+    description:
+      "Experienced in maintaining and migrating older software systems to newer versions with proper documentation.",
+  },
+  {
+    icon: Globe,
+    title: "Company Analysis",
+    description:
+      "Business management skills with focus on tech sector operations and financial analysis.",
+  },
+  {
+    icon: Languages,
+    title: "Languages",
+    description:
+      "Fluent in English and Bahasa Indonesia, with experience in international collaboration.",
   },
 ];
+
 const Skills = () => {
   return (
     <div id="skills" className="min-h-screen flex items-center justify-center py-12">
@@ -72,4 +95,5 @@ const Skills = () => {
     </div>
   );
 };
+
 export default Skills;
