@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger,SheetTitle } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetClose } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
+import Link from "next/link";
+
 export const NavigationSheet = () => {
   return (
     <Sheet>
@@ -11,11 +13,18 @@ export const NavigationSheet = () => {
           <Menu />
         </Button>
       </SheetTrigger>
-      {/* BAND AID FIX Harus ada tiles */}
       <SheetTitle className="hidden"/>
       <SheetContent className="p-5">
         <Logo />
-        <NavMenu orientation="vertical" className="-mt-20" />
+        <NavMenu 
+          orientation="vertical" 
+          className="-mt-20"
+          linkComponent={(href, children) => (
+            <SheetClose asChild>
+              <Link href={href}>{children}</Link>
+            </SheetClose>
+          )}
+        />
       </SheetContent>
     </Sheet>
   );
