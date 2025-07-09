@@ -29,7 +29,7 @@ const portfolios = [
 ];
 
 const Portfolio = () => (
-  <div id="portfolio" className="min-h-screen py-12 px-6 bg-gray-900 text-gray-100">
+  <div id="portfolio" className="min-h-screen py-12 px-6 bg-gray-900/20 text-gray-100">
     <h2 className="mb-14 text-5xl font-bold text-center">Portfolio</h2>
     <div className="max-w-screen-xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {portfolios.map((project) => (
